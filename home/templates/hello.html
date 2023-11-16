@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% block title %} landing page {% endblock title %}
+{% block start %}
+
+
+
+
+  <a href="/contact/" class="btn btn-primary">contact</a>
+  <a href="/about/" class="btn btn-primary">about</a>
+  <a href="/recipes/" class="btn btn-primary">recipes</a>
+
+  <h2>Name and Age Table</h2>
+
+<table class = "table table-striped" border="1">
+
+
+
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>can vote</th>
+
+    </tr>
+    {%for peoples in people%}
+    <tr>
+        <td>{{peoples.name}}</td>
+        <td>{{peoples.age}}</td>
+        <td>
+          {% if peoples.age > 18%}
+          yes
+          {% else %}
+          no
+          {% endif %}
+
+        </td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+<p>
+{% if 'cucumbers' in vegetables  %} yes {% endif %} not available
+
+</p>
+
+{% endblock %}
