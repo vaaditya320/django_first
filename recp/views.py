@@ -54,3 +54,6 @@ def delete_recipe(request, id):
     queryset = Recipe.objects.get(id = id)
     queryset.delete()
     return redirect('/recipes/')
+
+def login_page(request):
+    return render(request, 'login.html')
