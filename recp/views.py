@@ -72,6 +72,8 @@ def register_page(request):
 
         user = User.objects.filter(username = username)
 
+
+        # this is to check if the username exists then tell the user to pick a different one
         if user.exists():
             messages.info(request, "Username aleady exists.")
             return redirect('/register/')
