@@ -42,7 +42,7 @@
         <td>{{recipes.recipe_name}}</td>
         <td>{{recipes.recipe_description}}</td>
         <td> <img src="/media/{{recipes.recipe_image}}" style="height: 100px; width: 100px;"> </td>
-        <td> <a href="/delete-recipe/{{recipes.id}}" class="btn btn-danger m-2">Delete</a> </td>
+        <td> <a href="/delete-recipe/{{recipes.id}}" class="btn btn-danger">Delete</a> </td>
         <td> <a href="/update-recipe/{{recipes.id}}" class="btn btn-success">update</a> </td>
       </tr>
       {% endfor %}
